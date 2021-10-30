@@ -43,7 +43,7 @@
     }
 	
     const CONFIG_LEACLOUD_COUNT = {
-      enable: false,
+      enable: true,
 	  appId: 'AU8...',
 	  appKey: '4cU...',
 	  serverURLs: 'http' || ' '
@@ -258,7 +258,25 @@ Blog One
 					<p class="post-meta">
 						
 
+	
+    <span class="leancloud_visitors" id="/2021/10/28/MyGirl/_visitors" data-url="/2021/10/28/MyGirl/" data-title="MyGirl">
+       	<i class="icon-eye"></i>
+       	Hits
+        
+            <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+                   
+    </span>
+    
 
+
+
+	
+    <span class="leancloud_likes" id="/2021/10/28/MyGirl/_likes" data-url="/2021/10/28/MyGirl/" data-title="MyGirl" rel="unlike">
+        <i class="icon-heart"></i>
+        Likes
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+	
 
 					</p>
 				</div>
@@ -292,7 +310,25 @@ Blog One
 					<p class="post-meta">
 						
 
+	
+    <span class="leancloud_visitors" id="/2021/10/28/hello-world/_visitors" data-url="/2021/10/28/hello-world/" data-title="Hello World">
+       	<i class="icon-eye"></i>
+       	Hits
+        
+            <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+                   
+    </span>
+    
 
+
+
+	
+    <span class="leancloud_likes" id="/2021/10/28/hello-world/_likes" data-url="/2021/10/28/hello-world/" data-title="Hello World" rel="unlike">
+        <i class="icon-heart"></i>
+        Likes
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+	
 
 					</p>
 				</div>
@@ -462,6 +498,11 @@ Blog One
 -->
 
 
+  
+<script src="/plugin/leancloud/av-min.js"></script>
+<script src="/js/leancloud-count.js"></script>
+
+
 	
 
   
@@ -489,6 +530,21 @@ Blog One
 		<div class="local-search-footer">
 			<div class="topN-post">				
 				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title= "Popular post"></div> 
+	</div>
+	
+    <script>
+        var limitCount = 10;
+        if( $('#topN').length ){
+            setTimeout(function() {
+                topNPost(limitCount);
+			}, 3000);
+        }
+    </script>
+   
 								
 			</div>
 		</div>
