@@ -292,7 +292,32 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<p>Welcome to the world!</p>
+			<p>JAVA自定义异常机制</p>
+<p>‘’’<br>import java.util.Scanner</p>
+<p>public class DemoRegisterException{<br>    static String[] usernames = {“张三”， “李四”， “王五”}；</p>
+<pre><code>public static void main(String[] args) throws RegisterException&#123;
+    Scanner sc = new Scanner(System.in);
+    System.out.println(&quot;请输入用户名&quot;);
+    String username = sc.next();
+    checkUsername(username)
+&#125;
+
+public static void checkUsername(String username) throws RegisterException&#123;
+    for(String name: usernames)&#123;
+        if(name.equals(username))&#123;
+            try&#123;
+                throws new RegisterException(&quot;该用户名已被注册&quot;);
+            &#125;catch(RegisterException e)&#123;
+                e.printStackTrace();
+                return;
+            &#125;
+        &#125;
+    &#125;
+    System.out.println(&quot;注册成功！&quot;)
+&#125;
+</code></pre>
+<p> }</p>
+<p> public class RegisterException extends Exception{<br>    public RegisterException(){<br>        super();<br>    }<br> }<br>‘’’</p>
 	
 		</div>
 		
