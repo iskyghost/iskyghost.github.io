@@ -293,31 +293,7 @@
 
 		<div class="article-content" id="article-content">
 			<p>JAVA自定义异常机制</p>
-<p>‘’’<br>import java.util.Scanner</p>
-<p>public class DemoRegisterException{<br>    static String[] usernames = {“张三”， “李四”， “王五”}；</p>
-<pre><code>public static void main(String[] args) throws RegisterException&#123;
-    Scanner sc = new Scanner(System.in);
-    System.out.println(&quot;请输入用户名&quot;);
-    String username = sc.next();
-    checkUsername(username)
-&#125;
-
-public static void checkUsername(String username) throws RegisterException&#123;
-    for(String name: usernames)&#123;
-        if(name.equals(username))&#123;
-            try&#123;
-                throws new RegisterException(&quot;该用户名已被注册&quot;);
-            &#125;catch(RegisterException e)&#123;
-                e.printStackTrace();
-                return;
-            &#125;
-        &#125;
-    &#125;
-    System.out.println(&quot;注册成功！&quot;)
-&#125;
-</code></pre>
-<p> }</p>
-<p> public class RegisterException extends Exception{<br>    public RegisterException(){<br>        super();<br>    }<br> }<br>‘’’</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner</span><br><span class="line"></span><br><span class="line">public class DemoRegisterException&#123;</span><br><span class="line">	static String[] usernames = &#123;&quot;张三&quot;， “李四”， “王五”&#125;；</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) throws RegisterException&#123;</span><br><span class="line">		Scanner sc = new Scanner(System.in);</span><br><span class="line">		System.out.println(&quot;请输入用户名&quot;);</span><br><span class="line">		String username = sc.next();</span><br><span class="line">		checkUsername(username)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void checkUsername(String username) throws RegisterException&#123;</span><br><span class="line">		for(String name: usernames)&#123;</span><br><span class="line">			if(name.equals(username))&#123;</span><br><span class="line">				try&#123;</span><br><span class="line">					throws new RegisterException(&quot;该用户名已被注册&quot;);</span><br><span class="line">				&#125;catch(RegisterException e)&#123;</span><br><span class="line">					e.printStackTrace();</span><br><span class="line">					return;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;注册成功！&quot;)</span><br><span class="line">	&#125;</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"> public class RegisterException extends Exception&#123;</span><br><span class="line">	public RegisterException()&#123;</span><br><span class="line">		super();</span><br><span class="line">	&#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 	
 		</div>
 		
